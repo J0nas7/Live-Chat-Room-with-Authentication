@@ -23,15 +23,17 @@ const requireNoAuth = (to, from, next) => {
   }
 }
 
+const domain = '/js-elective/3rd-handin'
+
 const routes = [
   {
-    path: '/',
+    path: domain+'/',
     name: 'Welcome',
     component: Welcome,
     beforeEnter: requireNoAuth
   },
   {
-    path: '/chatroom',
+    path: domain+'/chatroom',
     name: 'Chatroom',
     component: Chatroom,
     beforeEnter: requireAuth
